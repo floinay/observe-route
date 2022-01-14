@@ -105,6 +105,37 @@
           }
         }
       }
+    },
+    "observer": {
+      "projectType": "library",
+      "root": "projects/observer",
+      "sourceRoot": "projects/observer/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/observer/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/observer/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/observer/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/observer/src/test.ts",
+            "tsConfig": "projects/observer/tsconfig.spec.json",
+            "karmaConfig": "projects/observer/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "route-observer"

@@ -15,6 +15,12 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
+    "paths": {
+      "observer": [
+        "dist/observer/observer",
+        "dist/observer"
+      ]
+    },
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
